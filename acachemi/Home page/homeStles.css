@@ -1,0 +1,339 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat ", sans-serif;
+  list-style: none;
+  text-decoration: none;
+  scroll-behavior: smooth;
+  z-index: 0;
+}
+
+:root {
+  --bg-color: #ffffff;
+  --text-color: #22100d;
+  --second-color: #685f78;
+  --main-color: #0ca79d;
+  --big-font: 3.8rem;
+  --h2-font: 2.6rem;
+  --p-font: 1.1rem;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  background-image: url("icons/gradient.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#sidebar {
+  background-color: #59d9d1;
+  color: #fff;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 60px;
+  transition: width 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1;
+}
+
+#sidebar.expanded {
+  width: 220px;
+  z-index: 1;
+}
+
+.nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.nav-list li a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 15px;
+  text-decoration: none;
+  color: #000000;
+  text-align: center;
+  width: 100%;
+}
+
+.nav-list li a i {
+  font-size: 20px;
+}
+
+#toggle-button {
+  position: absolute;
+  top: 5px;
+  left: 10px;
+  background-color: transparent;
+  color: #000000;
+  border: none;
+  cursor: pointer;
+  width: 50%;
+  display: flex;
+  transform: translateX(10%);
+}
+
+#toggle-button i {
+  font-size: 24px;
+}
+
+#sidebar .nav-list li a span {
+  display: none;
+}
+
+#sidebar.expanded .nav-list li a span {
+  display: inline;
+}
+
+#home {
+  position: absolute;
+  top: 10%;
+  left: 55%;
+  transform: translateX(-50%);
+  width: 100%;
+}
+
+#search {
+  position: absolute;
+  top: 17.5%;
+  left: 55%;
+  transform: translateX(-50%);
+  width: 100%;
+}
+
+#settings {
+  position: absolute;
+  top: 25%;
+  left: 55%;
+  transform: translateX(-50%);
+  width: 100%;
+}
+
+#messages {
+  position: absolute;
+  top: 32.5%;
+  left: 55%;
+  transform: translateX(-50%);
+  width: 100%;
+}
+
+#profile {
+  position: absolute;
+  bottom: 20px;
+  left: 55%;
+  transform: translateX(-50%);
+  width: 100%;
+}
+.content {
+  position: relative;
+  top: 3rem;
+  left: 7rem;
+}
+#welcome {
+  width: fit-content;
+  position: relative;
+  padding: 1rem 1rem 1rem 1rem;
+  border-style: solid;
+  border-radius: 1rem;
+  border-color: #59d9d1;
+  background-color: #59d9d1;
+}
+#rawr {
+  width: fit-content;
+  position: relative;
+  margin-top: 2rem;
+}
+.recentCoursesTop {
+  margin-top: 1rem;
+  width: fit-content;
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  display: flex;
+}
+.recentCoursesBottom {
+  margin-top: 1rem;
+  width: fit-content;
+  display: flex;
+}
+.courseContainer {
+  width: 416px;
+  height: 302px;
+  background-color: rgb(242, 242, 242);
+  outline: 2px black;
+  margin-left: 1rem;
+  border-radius: 10px;
+  stroke-width: 200px;
+  box-shadow: 4px 4px #e1e1e1;
+  transition: all 0.4s ease;
+}
+
+.courseContainer:hover {
+  box-shadow: 10px 10px #176762;
+  transform: translateY(-15px);
+}
+
+.courseContainer > p {
+  position: absolute;
+  width: fit-content;
+  padding: 1rem 1rem 1rem 1rem;
+}
+
+.coursetitle {
+  font-size: 25px;
+  color: #181818;
+  font-weight: bold;
+  font-family: Montserrat;
+  white-space: wrap;
+  overflow: hidden;
+  max-width: 400;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  text-overflow: ellipsis;
+  font-weight: bolder;
+}
+
+.actionButtons {
+  /* Contains the button and label of user watched/answered */
+  position: absolute;
+  bottom: 0;
+  padding-bottom: 1rem;
+}
+
+.bx-check-circle {
+  /*Icon font - Watched*/
+  padding-right: 1rem;
+  padding-left: 1rem;
+  height: 30px;
+  color: green;
+  font-size: 23px;
+}
+
+.bx-x-circle {
+  /*Icon font - Answered*/
+  padding-right: 1rem;
+  padding-left: 1rem;
+  height: 30px;
+  font-weight: 500;
+  color: red;
+  font-size: 23px;
+}
+
+.userWatchStatus {
+  /*User Watched?*/
+  padding-left: 1rem;
+  display: inline-block;
+  margin-right: 3rem;
+  height: 30px;
+  font-size: medium;
+  font-weight: 600;
+  font-family: Montserrat;
+}
+
+.userAnswerStatus {
+  /*User Answered?*/
+  padding-top: 0.5rem;
+  padding-left: 1rem;
+  display: inline-block;
+  margin-right: 4rem;
+  height: 30px;
+  font-size: medium;
+  font-weight: 600;
+  font-family: Montserrat;
+}
+
+.actionButtonsWatch {
+  background-color: #176762;
+  color: whitesmoke;
+  font-style: bold;
+  padding-right: 1rem;
+  border-radius: 05%;
+  border: 0;
+  height: 30px;
+  width: 130px;
+  justify-self: flex-end;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  border-radius: 10px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  font-family: Montserrat;
+  font-weight: 600;
+  animation-duration: 0.4ms;
+}
+
+.actionButtonsWatch:hover {
+  background-color: #dfdfdf;
+  color: #176762;
+}
+
+.actionButtonsAnswer {
+  background-color: #176762;
+  color: whitesmoke;
+  padding-right: 0rem;
+  border-radius: 05%;
+  border: 0;
+  height: 30px;
+  width: 130px;
+  justify-self: flex-end;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  font-family: Montserrat;
+  font-weight: 600;
+  animation-duration: 0.4ms;
+}
+
+.actionButtonsAnswer:hover {
+  background-color: #dfdfdf;
+  color: #176762;
+}
+
+.progbarBG {
+  background-color: #dfdfdf;
+  width: 100%;
+  border-radius: 15px;
+  width: 350px;
+}
+
+.progbarMAIN {
+  background-color: #176762;
+  color: white;
+  text-align: right;
+  font-size: 20px;
+  border-radius: 15px;
+  width: 100%;
+  margin: left;
+}
+
+.progressbarContainer {
+  width: 416px;
+  display: flex;
+  justify-content: center;
+}
+
+.messageforprogress {
+  padding-top: 1rem;
+  padding-left: 2.5rem;
+  padding-bottom: 0.2rem;
+  font-size: small;
+  font-style: 900;
+  font-family: Montserrat;
+}
