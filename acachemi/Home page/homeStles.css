@@ -23,141 +23,28 @@ html {
   height: 100%;
 }
 
-body {
-  height: 100%;
-  background-image: url("icons/gradient.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-#sidebar {
-  background-color: #59d9d1;
-  color: #fff;
-  position: fixed;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 60px;
-  transition: width 0.3s ease;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  z-index: 1;
-}
-
-#sidebar.expanded {
-  width: 220px;
-  z-index: 1;
-}
-
-.nav-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 20px;
-}
-
-.nav-list li a {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 15px;
-  text-decoration: none;
-  color: #000000;
-  text-align: center;
-  width: 100%;
-}
-
-.nav-list li a i {
-  font-size: 20px;
-}
-
-#toggle-button {
-  position: absolute;
-  top: 5px;
-  left: 10px;
-  background-color: transparent;
-  color: #000000;
-  border: none;
-  cursor: pointer;
-  width: 50%;
-  display: flex;
-  transform: translateX(10%);
-}
-
-#toggle-button i {
-  font-size: 24px;
-}
-
-#sidebar .nav-list li a span {
-  display: none;
-}
-
-#sidebar.expanded .nav-list li a span {
-  display: inline;
-}
-
-#home {
-  position: absolute;
-  top: 10%;
-  left: 55%;
-  transform: translateX(-50%);
-  width: 100%;
-}
-
-#search {
-  position: absolute;
-  top: 17.5%;
-  left: 55%;
-  transform: translateX(-50%);
-  width: 100%;
-}
-
-#settings {
-  position: absolute;
-  top: 25%;
-  left: 55%;
-  transform: translateX(-50%);
-  width: 100%;
-}
-
-#messages {
-  position: absolute;
-  top: 32.5%;
-  left: 55%;
-  transform: translateX(-50%);
-  width: 100%;
-}
-
-#profile {
-  position: absolute;
-  bottom: 20px;
-  left: 55%;
-  transform: translateX(-50%);
-  width: 100%;
-}
 .content {
   position: relative;
   top: 3rem;
   left: 7rem;
 }
-#welcome {
+
+.userWelcomeMsg {
+  height: 85px;
   width: fit-content;
   position: relative;
-  padding: 1rem 1rem 1rem 1rem;
-  border-style: solid;
-  border-radius: 1rem;
-  border-color: #59d9d1;
+  border-radius: 10px;
   background-color: #59d9d1;
 }
-#rawr {
-  width: fit-content;
-  position: relative;
-  margin-top: 2rem;
+
+.welcomeText {
+  height: 85px;
+
+  font-size: 30px;
+  font-family: Montserrat;
+  color: #f6f6f6;
+  text-align: center;
+  align-items: center;
 }
 .recentCoursesTop {
   margin-top: 1rem;
@@ -167,6 +54,7 @@ body {
   justify-content: space-between;
   display: flex;
 }
+
 .recentCoursesBottom {
   margin-top: 1rem;
   width: fit-content;
@@ -306,21 +194,13 @@ body {
   color: #176762;
 }
 
-.progbarBG {
-  background-color: #dfdfdf;
-  width: 100%;
-  border-radius: 15px;
-  width: 350px;
-}
-
-.progbarMAIN {
-  background-color: #176762;
-  color: white;
-  text-align: right;
-  font-size: 20px;
-  border-radius: 15px;
-  width: 100%;
-  margin: left;
+.progressMessage {
+  padding-top: 1rem;
+  padding-left: 2.5rem;
+  padding-bottom: 0.2rem;
+  font-size: small;
+  font-style: 900;
+  font-family: Montserrat;
 }
 
 .progressbarContainer {
@@ -329,11 +209,21 @@ body {
   justify-content: center;
 }
 
-.messageforprogress {
-  padding-top: 1rem;
-  padding-left: 2.5rem;
-  padding-bottom: 0.2rem;
-  font-size: small;
-  font-style: 900;
-  font-family: Montserrat;
+.backgroundPB {
+  background-color: #dfdfdf;
+  width: 100%;
+  border-radius: 15px;
+  width: 350px;
+}
+
+.foregroundPB {
+  background-color: #176762;
+  color: white;
+  text-align: right;
+  font-size: 20px;
+  border-radius: 15px;
+  width: 66%;
+  margin: left;
+
+  height: 20px;
 }
