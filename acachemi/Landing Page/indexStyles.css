@@ -80,10 +80,10 @@ section {
   padding: 90px 13.5%;
 }
 .home {
+  /*EDITED*/
   position: relative;
   height: 100vh;
   width: 100%;
-  background: url(icons/);
   background-size: cover;
   background-position: center;
   display: grid;
@@ -120,11 +120,13 @@ section {
 }
 
 #login {
+  /*NEW*/
   color: whitesmoke;
   background-color: #59d9d1;
 }
 
 #register {
+  /*NEW*/
   color: #676767;
   background-color: #e1e1e1;
 }
@@ -171,7 +173,6 @@ header.sticky {
   font-weight: 600;
   margin-bottom: 4px;
 }
-
 .container-text p {
   font-size: var(--p-font);
   color: var(--second-color);
@@ -205,6 +206,7 @@ header.sticky {
   font-size: var(--h2-font);
   line-height: 1.2;
 }
+
 .categories-content {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(400px, auto));
@@ -226,6 +228,7 @@ header.sticky {
 .box:hover {
   transform: translateY(-15px);
 }
+
 .box h3 {
   font-size: --h3-font;
   font-weight: 700;
@@ -237,14 +240,12 @@ header.sticky {
 .box h3:hover {
   color: var(--main-color);
 }
-
 .box p {
   font-size: var(--p-font);
   color: var(--second-color);
   font-weight: 500;
   color: #444444;
 }
-
 .popularIcons {
   align-self: center;
   height: 100px;
@@ -270,11 +271,11 @@ header.sticky {
 .btn:hover {
   transform: scale(0.9) translateY(-5px);
 }
+
 .courses {
   background: #c3fbf7;
   padding-bottom: 10rem;
 }
-
 .courses-content {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(400px, auto));
@@ -291,14 +292,13 @@ header.sticky {
   border-radius: 20px;
   box-shadow: -11.729px -11.729px 32px rgb(255 255 255 / 15%);
   transition: all 0.4s ease;
-
   background-color: #323232;
   cursor: pointer;
 }
-
 .boxCC:hover {
   transform: translateY(-15px);
 }
+
 .boxCC h3 {
   font-size: --h3-font;
   font-weight: 700;
@@ -311,7 +311,6 @@ header.sticky {
 .boxCC h3:hover {
   color: #59d9d1;
 }
-
 .boxCC p {
   font-size: var(--p-font);
   color: #e9e9e9;
@@ -331,6 +330,7 @@ header.sticky {
   height: auto;
   width: 100%;
 }
+
 .about-text h2 {
   font-size: var(--h2-font);
   line-height: 1.2;
@@ -345,6 +345,7 @@ header.sticky {
   margin-bottom: 30px;
   color: #ffffff;
 }
+
 .contact {
   padding: 60px 13%;
   background: var(--bg-color);
@@ -404,28 +405,27 @@ header.sticky {
   }
 
   .about {
+    padding: 90px 13.5%;
     background-size: cover;
     background-position: center;
     display: flex;
     align-items: start;
-
-    padding: 90px 13.5%;
   }
   .about-text h2 {
-    font-size: var(--h2-font);
-    line-height: 1.2;
+    margin-right: 2rem;
     margin-bottom: 20px;
     color: #ffffff;
-    margin-right: 2rem;
+    font-size: var(--h2-font);
+    line-height: 1.2;
   }
   .about-text p {
+    margin-right: 2rem;
     font-size: var(--p-font);
     color: var(--second-color);
     font-weight: 500;
     line-height: 30px;
     margin-bottom: 30px;
     color: #ffffff;
-    margin-right: 2rem;
   }
 }
 
@@ -465,7 +465,6 @@ header.sticky {
     height: 150vh;
     grid-template-columns: 1fr;
     gap: 1rem;
-    background-color: red;
   }
   .home-text {
     padding-top: 20px;
